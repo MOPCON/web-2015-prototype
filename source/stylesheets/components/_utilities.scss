@@ -1,0 +1,102 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix;
+}
+.center-block {
+  @include center-block;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}
+
+// .outer-col {
+//   margin-right: -($grid-gutter-width/2);
+//   margin-left: -($grid-gutter-width/2);
+//   padding: $grid-gutter-width;
+//   box-shadow: 0 0 0 5px $gray-lighter inset;
+// }
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+// Capstrap
+.relative {
+  position: relative;
+}
+
+
+// margin and padding
+// -------------------------
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.mbs {
+  margin-bottom: $gap-small;
+}
+.mbm {
+  margin-bottom: $gap-base;
+}
+.mbl {
+  margin-bottom: $gap-large;
+}
+
+.mt0 {
+  margin-top: 0 !important
+}
+.mts {
+  margin-top: $gap-small; 
+}
+.mtm {
+  margin-top: $gap-base; 
+}
+.mtl {
+  margin-top: $gap-large; 
+}
+
+
+.pdm {
+  padding: $gutter;
+}
