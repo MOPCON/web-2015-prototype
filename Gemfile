@@ -16,3 +16,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # js lib
 gem "jquery-middleman"
+
+# React
+gem "middleman-react"

@@ -102,6 +102,9 @@ mark,
 .text-muted {
   color: $text-muted;
 }
+.text-white {
+  color: white;
+}
 
 @include text-emphasis-variant('.text-primary', $brand-primary);
 

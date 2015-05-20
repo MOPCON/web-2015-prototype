@@ -14,7 +14,7 @@ end
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+page "/intro.html", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
@@ -34,6 +34,13 @@ end
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+
+# activate react
+activate :react
+after_configuration do
+  sprockets.append_path File.dirname(::React::Source.bundled_path_for('react.js'))
+end
+
 
 # Reload the browser automatically whenever files change
 configure :development do

@@ -65,8 +65,16 @@
 .relative {
   position: relative;
 }
+.absolute {
+  position: absolute;
+}
 
-
+.pos-r0 {
+  right: 0;
+}
+.pos-l0 {
+  left: 0;
+}
 // margin and padding
 // -------------------------
 .mb0 {
@@ -99,4 +107,12 @@
 
 .pdm {
   padding: $gutter;
+}
+
+// background
+.res-background {
+  background-size: cover;
+}
+.bg-p-center {
+  background-position: center center;
 }
