@@ -16,13 +16,13 @@ var MopconIntro = React.createClass({
 		tempPhoto = updatePhotos[0]
 	    // updatePhotos.splice(updatePhotos.length - 1, 1);
 	    updatePhotos.push(tempPhoto);
-	    console.log(updatePhotos);
+	    // console.log(updatePhotos);
 	    this.setState({data: updatePhotos});
 	    setTimeout(function(){ 
 	    	// updatePhotos.unshift(tempPhoto);
 	    	updatePhotos.splice(0, 1);
 			this.setState({data: updatePhotos});
-			console.log(updatePhotos);
+			// console.log(updatePhotos);
 	    }.bind(this), 600);
 	    
 	    //add one photo
