@@ -31,17 +31,23 @@ var MopconIntro = React.createClass({
 	componentDidMount: function() {
 		photos = [];
 		// api link https://www.flickr.com/services/api/explore/flickr.groups.pools.getPhotos
-		// var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=6534b52dffe2164a73b1388299b36461&group_id=2768675%40N23&per_page=500&page=2&format=json&api_sig=07241605a5653d9e4ac18c4344722722";
-		var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=6534b52dffe2164a73b1388299b36461&group_id=2768675%40N23&per_page=500&page=2&format=json&nojsoncallback=1&api_sig=1253d9df799c3d5d7fe6fcd580ef0236";
+		// var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=aac1157531bb8bf6f0c563ab91583443&group_id=2768675%40N23&per_page=500&page=2&format=json&nojsoncallback=1"
+		var flickrId='49269824@N04'
+		var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 		$.getJSON( flickerAPI, {
+			// id: flickrId,
+			tags: 'mopcon',
+			tagmode: "all",
 			format: "json"
 		}).done(function( data ) {
-			perpagePhoto = data.photos.photo.length;
-			photoCounts = this.state.photoCounts;
+			console.log(data);
+			perpagePhoto = data.items.length; //data.photos.photo.length;
+			photoCounts = data.items.length;
 			imgSize = "z"
 			for (var i = photoCounts - 1; i >= 0; i--) {
 				photosNum = Math.floor((Math.random() * perpagePhoto));
-				url = 'https://farm'+ data.photos.photo[photosNum].farm +'.staticflickr.com/'+ data.photos.photo[photosNum].server +'/'+ data.photos.photo[photosNum].id +'_'+ data.photos.photo[photosNum].secret +'_' + imgSize + '.jpg';
+				//url = 'https://farm'+ data.photos.photo[photosNum].farm +'.staticflickr.com/'+ data.photos.photo[photosNum].server +'/'+ data.photos.photo[photosNum].id +'_'+ data.photos.photo[photosNum].secret +'_' + imgSize + '.jpg';
+				url = data.items[photosNum].media.m.replace('_m', '_z');
 				
 				photo = {
 					'url': url
