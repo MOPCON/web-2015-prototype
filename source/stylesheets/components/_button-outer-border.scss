@@ -1,0 +1,21 @@
+
+.btn-outer-border {
+	$color1: #00CF6B;
+	$color2: #00AD59;
+	@include background-image(linear-gradient($color1, $color2));
+	color: white;
+	margin: 10px;
+	box-shadow: 0 0 0 10px $gray-lighter;
+	// border: 10px solid $gray-lighter;
+	border-radius: $border-radius-base;
+	@include transition(background .15s);
+	&:hover, &:focus, &:active {
+		color: white;
+		@include background-image(linear-gradient(darken($color1, 5%), darken($color2, 5%)));
+	}
+	&.wide {
+		$size: 60px;
+		padding-left: $size;
+		padding-right: $size;
+	}
+}

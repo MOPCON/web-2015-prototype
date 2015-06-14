@@ -10,11 +10,13 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
 
     <%= stylesheet_link_tag "all" %>
-    <%= javascript_include_tag  "all" %>
+    <%= stylesheet_link_tag "web-fonts" %>
+    <%= javascript_include_tag  "all/all.js" %>
   </head>
 
   <body class="<%= page_classes %>">
     <%= partial "/partials/navbar" %>
     <%= yield %>
+    <%= partial "/partials/footer" %>
   </body>
 </html>

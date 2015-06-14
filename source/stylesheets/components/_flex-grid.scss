@@ -1,0 +1,31 @@
+.flex-grid {
+	@include display-flex;
+	&.vertical, .vertical{
+		@include flex-direction(column);
+		@include display-flex;
+	}
+	&.horizontal, .horizontal{
+		@include flex-direction(row);
+		@include display-flex;
+	}
+    .two {
+    	@include flex(2);
+    }
+    .one {
+    	@include flex(1);
+    }
+    .three {
+    	@include flex(3);
+    }
+    .four {
+    	@include flex(4);
+    }
+	&.img div {
+		min-height: 200px;
+		background-position: center center;
+		background-size: cover;
+		@media (max-width: $screen-xs-max) {
+			min-height: 150px;
+		}
+	}
+}

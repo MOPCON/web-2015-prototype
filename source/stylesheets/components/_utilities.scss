@@ -75,6 +75,9 @@
 .pos-l0 {
   left: 0;
 }
+.pos-b0 {
+  bottom: 0;
+}
 // margin and padding
 // -------------------------
 .mb0 {
@@ -115,4 +118,13 @@
 }
 .bg-p-center {
   background-position: center center;
+}
+.bg-light-gray {
+  background-color: #FAFAFA;
+}
+
+// other little object
+hr.thin-fragment {
+  max-width: 55px;
+  border-top: $brand-primary 1px solid;
 }

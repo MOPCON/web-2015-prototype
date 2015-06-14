@@ -1,0 +1,25 @@
+.bucket-panel {
+	$padding-left: 70px;
+	padding: $bucket-padding;
+	.bucket-row {
+		padding-left: $padding-left;
+		margin-bottom: $bucket-padding;
+		position: relative;
+	}
+	.bucket-icon {
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 44px;
+	}
+	.bucket-title {
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+	.miner-mg {
+		margin-left: -$bucket-padding;
+		margin-right: -$bucket-padding;
+		margin-bottom: -$bucket-padding;
+	}
+}
