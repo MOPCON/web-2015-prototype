@@ -2,4 +2,29 @@
 .header {
 	padding: $header-vertical-padding $header-horizontal-padding $header-vertical-padding $header-horizontal-padding;
 	background-color: $brand-primary;
+	.header-info-box {
+		background-color: #FFF;
+		max-width: 175px;
+		padding: 20px;
+		margin-top: -$header-vertical-padding;
+		margin-bottom: $header-vertical-padding;
+		margin-left: auto;
+		margin-right: auto;
+		// text-align: justify;
+		.en-location {
+			font-size: 16px;
+			color: #AAAAAA;
+		}
+		.tw-location {
+			font-size: 16px;
+		}
+		hr {
+			border-top-color: $brand-primary;
+			width: 50%;
+		}
+		.num-date {
+			font-size: 24px;
+			color: #FF8300;
+		}
+	}
 }

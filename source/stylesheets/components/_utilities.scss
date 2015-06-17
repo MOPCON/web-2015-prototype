@@ -122,6 +122,26 @@
 .bg-light-gray {
   background-color: #FAFAFA;
 }
+.bg-deep-blue {
+  background-color: #14436D;
+}
+.bg-transparent-black {
+  background-color: rgba(black, .75);
+}
+.bg-dot {
+  &:after {
+    content: "";
+    @include background-image(radial-gradient(black 1px, rgba(black,.3) 1.5px));
+    background-size: 3px 3px;
+    background-position: center center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
 
 // other little object
 hr.thin-fragment {
