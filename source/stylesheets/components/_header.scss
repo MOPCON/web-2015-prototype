@@ -2,9 +2,11 @@
 .header {
 	padding: $header-vertical-padding $header-horizontal-padding $header-vertical-padding $header-horizontal-padding;
 	background-color: $brand-primary;
+	position: relative;
+	overflow: hidden;
 	.header-info-box {
 		background-color: #FFF;
-		max-width: 175px;
+		display: inline-block;
 		padding: 20px;
 		margin-top: -$header-vertical-padding;
 		margin-bottom: $header-vertical-padding;
@@ -27,4 +29,17 @@
 			color: #FF8300;
 		}
 	}
+
+	.circle-logo {
+		background-image: image-url("large-logo.png");
+		background-image: none, image-url("large-logo.svg");
+		width: image-width("large-logo.png");
+		height: image-height("large-logo.png");
+		opacity: 0.1;
+		position: absolute;
+		left: -(image-width("large-logo.png") / 2);
+		top: -(image-height("large-logo.png") / 2);
+		@include animation(infinite-rotate 360s infinite linear);
+	}
 }
+
