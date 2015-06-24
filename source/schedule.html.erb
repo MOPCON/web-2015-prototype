@@ -1,0 +1,42 @@
+---
+title: Welcome to MOPCON
+---
+
+<header class="header text-white text-center">
+	<!-- <img src="images/logo_header@2x.png" height="" width="500" alt="" class="img-responsive"> -->
+	<div class="circle-logo"></div>
+	<h1 class="text-center">Schdule<br>Of 2015</h1>
+</header>
+
+<div class="row bg-deep-blue text-white text-center">
+	<h2 class="col-sm-6">10 / 30</h2>
+	<h2 class="col-sm-6 slash">11 / 01</h2>
+</div>
+
+
+
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWLJ01IXDDFp4w3JH4iMQdAlxTaLTERow">
+</script>
+<script type="text/javascript">
+function initialize() {
+  var myLatlng = new google.maps.LatLng(22.626417,120.285722);
+  var mapOptions = {
+    zoom: 16,
+    center: myLatlng,
+    draggable: false, 
+    scrollwheel: false
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'ICCK 高雄國際會議中心'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
