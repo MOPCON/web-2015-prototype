@@ -142,7 +142,13 @@
     z-index: 1;
   }
 }
+// ilandy add it -- start
+.bg-gray {
+  @include filter(grayscale(1));
+}
+.super-idx { position: relative; z-index: 9999; }
 
+// ilandy add it -- end
 // other little object
 hr.thin-fragment {
   max-width: 55px;
