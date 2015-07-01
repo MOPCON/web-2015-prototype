@@ -17,23 +17,31 @@ title: Welcome to MOPCON
 
 </div>
 
-<div class="bucket-panel res-background bg-dot bg-gray relative" style="background-image: url(https://c1.staticflickr.com/1/443/18053300404_dd45548e67_h.jpg); min-height: 300px">
+<div class="bucket-panel res-background bg-dot bg-gray relative" style="background-image: url(images/location/kaohsiung_01.JPG); min-height: 300px">
 	<div class="container container-fluid">
-		<div class="row">
-			<div class="col-sm-7 pull-right super-idx">
-				<div class="card mtl res-background" style="background-image: url(https://c2.staticflickr.com/6/5525/10607245444_9f836db6fd_k.jpg); min-height: 350px;">
+		<div class="row relative" style="z-index: 2">
+			<div class="col-sm-7 pull-right">
+				<div class="card res-background" style="background-image: url(images/location/icck_01.JPG); min-height: 300px;">
 				</div>
-				<div class="card mtl">
-					<h4 class="mt0">高鐵/火車/捷運</h4>
-					<ol>
-						<li>左營高鐵站/高雄火車站搭捷運紅線</li>
-						<li>至捷運美麗島站換乘橘線往西子灣方向</li>
-						<li>捷運鹽埕埔站下車，二號出口步行約 250 公尺可至會場</li>
-					</ol>
+				<div class="card">
+					<h3 class="card-head">
+						高鐵/火車/捷運
+					</h3>
+					<div class="card-body">
+						<ol>
+							<li>左營高鐵站/高雄火車站搭捷運紅線</li>
+							<li>至捷運美麗島站換乘橘線往西子灣方向</li>
+							<li>捷運鹽埕埔站下車，二號出口步行約 250 公尺可至會場</li>
+						</ol>
+					</div>
 				</div>
-				<div class="card mtl">
-					<h4 class="mt0">公車</h4>
-					<p>歷史博物館0南(單邊停靠)、0北(單邊停靠)、11、25、33、56、60、76、77、82、建國幹線、91、214、219、248</p>
+				<div class="card">
+					<h3 class="card-head">
+						公車
+					</h3>
+					<div class="card-body">
+						<p>歷史博物館0南(單邊停靠)、0北(單邊停靠)、11、25、33、56、60、76、77、82、建國幹線、91、214、219、248</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -48,8 +56,10 @@ title: Welcome to MOPCON
 function initialize() {
   var myLatlng = new google.maps.LatLng(22.626417,120.285722);
   var mapOptions = {
-    zoom: 15,
-    center: myLatlng
+    zoom: 16,
+    center: myLatlng,
+    draggable: false, 
+    scrollwheel: false
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
