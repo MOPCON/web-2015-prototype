@@ -132,6 +132,7 @@
   &:after {
     content: "";
     @include background-image(radial-gradient(black 1px, rgba(black,.3) 1.5px));
+    @include transition(1s);
     background-size: 3px 3px;
     background-position: center center;
     position: absolute;
@@ -145,6 +146,18 @@
 // ilandy add it -- start
 .bg-gray {
   @include filter(grayscale(1));
+  @include transition(2s);
+}
+.bg-coloranimation {
+  @include filter(grayscale(0));
+  &:after {
+    opacity: 0;
+  }
+}
+@media (max-width: $screen-sm-max) {
+  .bg-gray {
+    @include filter(grayscale(0));
+  }
 }
 .super-idx { position: relative; z-index: 9999; }
 
