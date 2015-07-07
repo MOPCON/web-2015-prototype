@@ -37,6 +37,7 @@
   @include text-hide;
 }
 
+
 // .outer-col {
 //   margin-right: -($grid-gutter-width/2);
 //   margin-left: -($grid-gutter-width/2);
@@ -107,6 +108,7 @@
   margin-top: $gap-large; 
 }
 
+.prm{padding-right: $gap-base;}
 
 .pdm {
   padding: $gutter;
@@ -123,7 +125,7 @@
   background-color: #FAFAFA;
 }
 .bg-deep-blue {
-  background-color: #14436D;
+  background-color: #056C6E;
 }
 .bg-transparent-black {
   background-color: rgba(black, .75);
@@ -160,6 +162,8 @@
   }
 }
 .super-idx { position: relative; z-index: 9999; }
+
+.fc-primary{ color: $brand-primary; }
 
 // ilandy add it -- end
 // other little object
