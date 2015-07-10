@@ -1,6 +1,51 @@
----
-title: Welcome to MOPCON
----
+;;;
+"title": "Welcome to MOPCON",
+"cmy_list": [
+	{ "cmy_name":"KSDG" ,
+	  "cmy_fullname":"KSDG" ,
+	  "cmy_img":"images/community/ksdg.png",
+	  "cmy_content":"Kaohsiung Software Developer Group 是高雄從事軟體開發、網路技術開發者一起交流的園地，2012/05首度聚會活動。<br><br>目前每月舉辦 Meet-up 及 Web Course 各一場，交流主題涵蓋各種軟體技術，歡迎對軟體開發技術有興趣的朋友可以踴躍參與。" ,
+	  "cmy_facebook":"https://www.facebook.com/groups/KSDGroup" ,
+	  "cmy_google":"" ,
+	  "cmy_web":"" } ,
+  	{ "cmy_name":"CHK" ,
+	  "cmy_fullname":"CocoaHeads Kaohsiung" ,
+	  "cmy_img":"images/community/cocoaheads.jpg",
+	  "cmy_content":"CocoaHeads Kaohsiung 定位為南台灣 Mac/iOS 開發者的固定聚會。聚會不定期邀請各地講者與會員特定主題或經驗分享。<br><br>您可能會遇到：開發者在聚會上分享各自的心得與點子。 <br><br>也可能會遇到：開發者在聚會上與使用者面對面溝通，與其他開發人員面對面分享。<br><br>您可能會在此找到新合作夥伴或更有挑戰性的工作、甚至新的商機。" ,
+	  "cmy_facebook":"https://www.facebook.com/groups/cocoaheads.kaohsiung" ,
+	  "cmy_web":"http://cocoaheads.org:8106/tw/Kaohsiung/index.html" ,
+	  "cmy_google":""} ,
+	{ "cmy_name":"MOSUT" ,
+	  "cmy_fullname":"MOSUT" ,
+	  "cmy_img":"images/community/mosut.png",
+	  "cmy_content":"MOSUT (Meet Open Source Users in Tainan) 是一群生活在台南、對資訊科技有熱情的朋友共同發起的聚會。 關注開放標準/開放規格、自由軟體 / 開放原始碼，進而到開放硬體等議題。<br><br>每兩周舉辦一次聚會，提供大學院校、公司團體，以及個人作技術討論交流的機會。" ,
+	  "cmy_facebook":"https://www.facebook.com/groups/mosut" ,
+	  "cmy_google":"https://code.google.com/p/mosut/" ,
+	  "cmy_web":""} ,
+	{ "cmy_name":"KIMU" ,
+	  "cmy_fullname":"KIMU" ,
+	  "cmy_img":"images/community/kimu.jpg",
+	  "cmy_content":"高雄獨立遊戲開發者聚會(Kaohsiung Indies Meet Up)，簡稱KIMU。2012年由中山大學促進產業發展研究中心協助成立。 是一個以高雄為活動據點，推動南臺灣獨立遊戲開發國際化與相關產業活動的非營利性社群組織。" ,
+	  "cmy_facebook":"https://www.facebook.com/groups/kimugroup" ,
+	  "cmy_google":"" ,
+	  "cmy_web":""} ,
+	{ "cmy_name":"KaLUG" ,
+	  "cmy_fullname":"KaLUG" ,
+	  "cmy_img":"images/community/kalug.png",
+	  "cmy_content":"Kaohsiung Linux User Group (KaLUG) 是由一群熱愛 open source / free software 的高雄人所組成的團體。 平日討論的主題有 Linux, Debian, Ubuntu, Vim, Emacs, Git, Python, shell script, Drupal, OpenStreetMap, Security ... 等。" ,
+	  "cmy_facebook":"https://www.facebook.com/groups/kalug.tw" ,
+	  "cmy_web":"http://kalug.linux.org.tw/",
+	  "cmy_google":"https://plus.google.com/communities/113465528091946960161"} ,
+	{ "cmy_name":"高雄前端社群" ,
+	  "cmy_fullname":"高雄前端社群" ,
+	  "cmy_img":"images/community/kf2e.jpg",
+	  "cmy_content":"高雄前端社群於2013年3月31日創立， 每月固定舉辦前端主題聚會，歡迎網頁設計師一塊前來交流" ,
+	  "cmy_facebook":"https://www.facebook.com/groups/358503154261390" ,
+	  "cmy_google":"" ,
+	  "cmy_web":"http://gonsakon-7655f2.kktix.cc/"}
+]
+
+;;;
 
 <header class="header">
 	<div class="circle-logo"></div>
@@ -13,106 +58,40 @@ title: Welcome to MOPCON
 		<h3 class="bucket-title">高雄軟體技術社群</h3>
 		<div></div>
 	</div>
-	
-
 	<div class="row">
 		<div class="col-sm-3">
 			<nav class="list-group">
 				<div class="list-group-item">
 				  <h4>社群列表</h4>
 				</div>
-				<a class="list-group-item" href="#ksdg">
-				  KSDG
-				</a>
-				<a href="#CocoaHeads_Kaohsiung" class="list-group-item">CocoaHeads Kaohsiung</a>
-				<a class="list-group-item" href="#KIMU">
-				  KIMU
-				</a>
-				<a class="list-group-item" href="#KaLUG">
-				  KaLUG
-				</a>
-				<a class="list-group-item" href="#高雄前端社群">
-				  高雄前端社群
-				</a>
-
-				
+				<% current_page.data.cmy_list.each do |f| %>
+					<a class="list-group-item" href="#<%= f.cmy_name %>"><%= f.cmy_name %></a>
+				<% end %>
 			</nav>
 		</div><!-- col-sm-3 -->
 		<div class="col-sm-9">
-			<div class="card" id="ksdg">
+			<% current_page.data.cmy_list.each do |f| %>
+				<div class="card" id="<%= f.cmy_name %>">
 				<h3 class="card-head">
-					KSDG
+					<%= f.cmy_fullname %>
 				</h3>
 				<div class="card-body clearfix">
-					<img  class="pull-left prm" src="images/community/ksdg.png" width="100" alt="">
-					<p>Kaohsiung Software Developer Group 是高雄從事軟體開發、網路技術開發者一起交流的園地，2012/05首度聚會活動。
-					<br><br>
-					目前每月舉辦 Meet-up 及 Web Course 各一場，交流主題涵蓋各種軟體技術，歡迎對軟體開發技術有興趣的朋友可以踴躍參與。</p>
+					<img  class="pull-left prm" src="<%= f.cmy_img %>" width="100" alt="">
+					<p><%= f.cmy_content %></p>
 				</div>
 				<div class="card-body">
-					<a href="https://www.facebook.com/groups/KSDGroup">Facebook</a>
+					<% if  f.cmy_facebook != "" %>
+						<a href="<%= f.cmy_facebook %>">Facebook</a>
+					<% end %>
+					<% if  f.cmy_web != "" %>
+						 <span class="fc-primary">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span> <a href="<%= f.cmy_web %>">Website</a>
+					<% end %>
+					<% if  f.cmy_google != "" %>
+						 <span class="fc-primary">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span> <a href="<%= f.cmy_google %>">Google+</a>
+					<% end %>
 				</div>
 			</div>
-
-			<div class="card" id="CocoaHeads_Kaohsiung">
-				<h3 class="card-head">
-					CocoaHeads Kaohsiung
-				</h3>
-				<div class="card-body clearfix">
-					<img  class="pull-left prm" src="images/community/cocoaheads.jpg" width="100" alt="">
-					<p>CocoaHeads Kaohsiung 定位為南台灣 Mac/iOS 開發者的固定聚會。聚會不定期邀請各地講者與會員特定主題或經驗分享。</p>
-
-					<p>您可能會遇到：開發者在聚會上分享各自的心得與點子。 </p>
-					<p>也可能會遇到：開發者在聚會上與使用者面對面溝通，與其他開發人員面對面分享。</p>
-					<p>您可能會在此找到新合作夥伴或更有挑戰性的工作、甚至新的商機。</p>
-				</div>
-				<div class="card-body">
-					<a href="http://cocoaheads.org:8106/tw/Kaohsiung/index.html">Website</a> <span class="fc-primary"> | </span> 
-					<a href="https://www.facebook.com/groups/cocoaheads.kaohsiung/">Facebook</a>
-				</div>
-			</div>
-
-			<div class="card" id="KIMU">
-				<h3 class="card-head">
-					KIMU
-				</h3>
-				<div class="card-body clearfix">
-					<img  class="pull-left prm" src="images/community/kimu.jpg" width="100" alt="">
-					<p>高雄獨立遊戲開發者聚會(Kaohsiung Indies Meet Up)，簡稱KIMU。2012年由中山大學促進產業發展研究中心協助成立。 是一個以高雄為活動據點，推動南臺灣獨立遊戲開發國際化與相關產業活動的非營利性社群組織。</p>
-				</div>
-				<div class="card-body">
-					<a href="https://www.facebook.com/groups/kimugroup">Facebook</a>
-				</div>
-			</div>
-
-			<div class="card" id="KaLUG">
-				<h3 class="card-head">
-					KaLUG
-				</h3>
-				<div class="card-body clearfix">
-					<img  class="pull-left prm" src="images/community/kalug.png" width="100" alt="">
-					<p>Kaohsiung Linux User Group (KaLUG) 是由一群熱愛 open source / free software 的高雄人所組成的團體。 平日討論的主題有 Linux, Debian, Ubuntu, Vim, Emacs, Git, Python, shell script, Drupal, OpenStreetMap, Security ... 等。</p>
-				</div>
-				<div class="card-body">
-					<a href="https://www.facebook.com/groups/kalug.tw/">Facebook</a> <span class="fc-primary"> | </span> 
-					<a href="http://kalug.linux.org.tw/">Website</a> <span class="fc-primary"> | </span> 
-					<a href="https://plus.google.com/communities/113465528091946960161">Google+</a>
-				</div>
-			</div>
-
-			<div class="card" id="高雄前端社群">
-				<h3 class="card-head">
-					高雄前端社群
-				</h3>
-				<div class="card-body clearfix">
-					<img  class="pull-left prm" src="images/community/kf2e.jpg" width="100" alt="">
-					<p>高雄前端社群於2013年3月31日創立， 每月固定舉辦前端主題聚會，歡迎網頁設計師一塊前來交流</p>
-				</div>
-				<div class="card-body">
-					<a href="https://www.facebook.com/groups/358503154261390/">Facebook</a> <span class="fc-primary"> | </span> 
-					<a href="http://gonsakon-7655f2.kktix.cc/">Website</a>	
-				</div>
-			</div>
+			<% end %>
 		</div><!-- col-sm-9 -->
 
 

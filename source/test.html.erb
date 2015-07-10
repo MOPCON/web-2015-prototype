@@ -1,0 +1,15 @@
+;;;
+
+
+"employees": [
+	{ "firstName":"John" , "lastName":"Doe" },
+	{ "firstName":"Anna" , "lastName":"Smith" },
+	{ "firstName":"Peter" , "lastName":"Jones" }
+]
+
+;;;
+<% current_page.data.employees.each do |f| %>
+	<a href="">firstName : <%= f.firstName %></a>
+	<p>lastName : <%= f.lastName %></p>
+	<hr>
+<% end %>
