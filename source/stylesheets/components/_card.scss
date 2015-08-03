@@ -13,6 +13,10 @@
 	.card-body + .card-body {
 		border-top: 1px solid $gray-lighter;
 	}
+	.card-footer {
+		padding: $card-vertical-padding $card-horizontal-padding;
+		border-top: 1px solid $gray-lighter;
+	}
 	& + & {
 		margin-top: $card-gutter;
 	}

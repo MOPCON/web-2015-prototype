@@ -1,0 +1,45 @@
+---
+title: Welcome to MOPCON
+---
+
+<header class="header">
+	<div class="circle-logo"></div>
+	<img src="images/logo_header@2x.png" height="" width="500" alt="" class="img-responsive center-block super-idx">
+</header>
+
+<div class="bucket-panel bg-transparent-black">
+	<div class="bucket-row text-white">
+		<i class="bucket-icon ton-li-microphone-2"></i>
+		<h3 class="bucket-title">講者</h3>
+		<div>Speaker</div>
+	</div>
+	<div class="container-md">
+		<% 5.times do %>
+		<div class="card">
+			<h3 class="card-head">
+				<a href="#"><%= lorem.name %></a> <small>頭銜</small>
+			</h3>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-3">
+						<img src="<%= lorem.image('300x300', :random_color => true) %>" alt="" class="img-responsive mbl">
+					</div>
+					<div class="col-sm-9">
+						<% 5.times do %>
+						<p><%= lorem.paragraph %></p>
+						<% end %>
+
+						<hr>
+						<div class="text-right">
+							<a href="#">臉書嗎？</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<% end %>
+	</div>
+</div>
+
+
