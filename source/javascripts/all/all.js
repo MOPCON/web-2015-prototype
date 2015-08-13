@@ -7,12 +7,10 @@ $(document).ready(function(){
 		$(this).removeClass('bg-coloranimation');
 	});
 	$('.slideDown').on('click',function(){
-		$(this).toggleClass('active');
-		$(this).parents('.schedule-body').next('.schedule-footer').toggleClass('active');
+		$(this).toggleClass('active').parents('.schedule-body').next('.schedule-footer').toggleClass('active');
 	});
 	$('.slash').on('click',function(){
 		$('[data-schedule]').addClass('hidden-xs').eq($(this).index()).toggleClass('hidden-xs');
-
 	});
 		
 });
