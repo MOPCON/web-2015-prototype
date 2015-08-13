@@ -1,0 +1,60 @@
+.column-layout {
+	
+	// @include column-gap($gutter*2);
+	// @include column-fill(balance);
+	// padding-bottom: 0; 
+	&.column-3 .column{
+		// @include column-count(3);
+		width: (100% / 3);
+		@media (max-width: $screen-md-min) {
+			width: (100% / 2);
+		}
+		@media (max-width: $screen-sm-min) {
+			width: (100% / 1);
+		}
+	}
+	&.column-4 .column{
+		// @include column-count(4);
+		width: (100% / 4);
+		@media (max-width: $screen-md-min) {
+			width: (100% / 2);
+		}
+	}
+	&.column-5 .column{
+		// @include column-count(5);
+		width: (100% / 5);
+		@media (max-width: $screen-md-min) {
+			width: (100% / 3);
+		}
+		@media (max-width: $screen-sm-min) {
+			width: (100% / 2);
+		}
+	}
+	&.column-6 .column{
+		// @include column-count(6);
+		width: (100% / 6);
+		@media (max-width: $screen-md-min) {
+			width: (100% / 4);
+		}
+		@media (max-width: $screen-sm-min) {
+			width: (100% / 2);
+		}
+	}
+
+	.column{
+		// @include column-break-inside(avoid); 
+		// page-break-inside: avoid; //同上, for firefox
+		display: inline-block;
+		min-height: 1px;
+		margin-top: 0;
+		margin-bottom: $gutter*2;
+		margin-left: -4px;
+		vertical-align: top;
+		padding: 0 $gutter;
+	}
+
+
+	img {
+		width: 100%;
+	}
+}
