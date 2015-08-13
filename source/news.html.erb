@@ -1,0 +1,43 @@
+---
+title: 公告
+---
+
+<header class="header">
+	<div class="circle-logo"></div>
+	<img src="images/logo_header@2x.png" height="" width="500" alt="" class="img-responsive center-block super-idx">
+</header>
+
+<div class="bucket-panel bg-transparent-black">
+	<div class="bucket-row text-white">
+		<i class="bucket-icon ton-li-newspaper"></i>
+		<h3 class="bucket-title">公告</h3>
+		<div>News</div>
+	</div>
+	<div class="container-md">
+		<% 5.times do %>
+		<div class="card">
+			<h3 class="card-head">
+				<a href="#"><%= lorem.name %></a> 
+			</h3>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<% 5.times do %>
+						<p><%= lorem.paragraph %></p>
+						<% end %>
+					</div>
+				</div>
+				<div class="text-right text-muted">
+					<small><%= lorem.date  %></small>
+				</div>
+			</div>
+			<div class="card-footer text-right">
+				<a href="#">連結</a>
+			</div>
+			
+		</div>
+		<% end %>
+	</div>
+</div>
+
+

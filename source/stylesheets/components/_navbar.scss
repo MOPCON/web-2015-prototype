@@ -60,6 +60,14 @@
     overflow-y: auto;
   }
 
+  &.collapse {
+    height: 1px;
+  }
+
+  &.in {
+    height: auto;
+  }
+
   @media (min-width: $grid-float-breakpoint) {
     width: auto;
     border-top: 0;
@@ -71,6 +79,7 @@
       height: auto !important;
       padding-bottom: 0; // Override default setting
       overflow: visible !important;
+      height: 1px;
     }
 
     &.in {
