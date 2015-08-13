@@ -6,5 +6,6 @@ $(document).ready(function(){
 	},function(){
 		$(this).removeClass('bg-coloranimation');
 	});
+	$('.schedule-header > span').text();
 		
 });

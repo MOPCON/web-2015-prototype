@@ -98,6 +98,9 @@
 .mt0 {
   margin-top: 0 !important
 }
+.p0 {
+  padding: 0;
+}
 .mts {
   margin-top: $gap-small; 
 }
@@ -124,12 +127,16 @@
 .bg-light-gray {
   background-color: #FAFAFA;
 }
+.bg-green {
+  background-color: #007084;
+}
 .bg-deep-blue {
   background-color: #056C6E;
 }
 .bg-transparent-black {
   background-color: rgba(black, .75);
 }
+.bg-pink{ background-color: #F8A48A;}
 .bg-dot {
   &:after {
     content: "";

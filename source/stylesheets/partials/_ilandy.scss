@@ -1,13 +1,124 @@
-.date {
-	.date-text {
-		width: 48vw;
+.slash {
+	padding: 20px 0px;
+	@include skewX(-30deg);
+	@include box-sizing(content-box);
+	font-size: 1.5em;
+	font-family: "Helvetica Neue", Arial;
+	font-weight: 300;
+	cursor: pointer;
+	&:first-child{
+		    margin-left: -2px;
+		&:after{
+			content: "10 / 31";
+			@include skewX(30deg);
+			display: block;
+		}
 	}
-	.date-part {
-		width: 2vw;
-		border-left: 90px solid rgba(0,0,0,0);
-		border-bottom: 160px solid #0a385b;
+	
+	&:last-child{
+		    margin-left: -1px;
+		    margin-right: -10px;
+		    padding-left: 5px;
+	    &:after{
+			content: "11 / 01";
+			@include skewX(30deg);
+			display: block;
+		}
 	}
+	
 }
 .filter-img {
 	@include filter(grayscale(0.4));
+}
+/*---------------------/
+
+ ** schedule style **
+
+/---------------------*/
+.schedule {
+	font-family: "Helvetica Neue", Arial, "Microsoft JhengHei","微軟正黑體";
+	font-weight: 300;
+	margin-bottom: 30px;
+	.schedule-header {
+		width: 100%;
+		font-size: 1.5em;
+		text-align: center;
+		margin-bottom: $gutter*2;
+		& > span {
+			display: inline-block;
+			position: relative;
+			color: #00565E;
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -$gutter/2;
+				left: 0;
+				height: 2px;
+				width: 100%;
+				background-color: #00565E;
+			}
+		}
+	}
+	.schedule-body {
+		@include display-flex;
+		border: 1px solid #ccc;
+		height: 200px;
+
+	}
+	.schedule-footer {
+		border: 1px solid #ccc;
+		padding: $gutter;
+		display: none;
+		& > h4 {
+			color: #00565E;
+		}
+		&.active {
+			display: block;
+		}
+	}
+	.schedule-img {
+		width: 200px;
+		height: 198px;
+		overflow: hidden;
+	}
+	.schedule-content {
+		@include flex(1);
+		background-color: #EFEFEF;
+		border-left: 1px solid #ccc;
+		color: #00565E;
+		
+	}
+	.schedule-content-header {
+		padding: 0 20px;
+		height: 148px;
+		& > p {
+			height: 59px;
+		}
+	}
+	.schedule-content-footer {
+		
+		& > div {
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+	.slideDown {
+		width: 30px;
+		height: 30px;
+		border: 2px solid #00565E;
+		font-size: 1.7em;
+		line-height: 1;
+		text-align: center;
+		@include border-radius(15px);
+		cursor: pointer;
+		&:after{
+			content:"＋";
+		}
+		&.active:after{
+			content:"−";
+		}
+
+	}
+
+
 }
