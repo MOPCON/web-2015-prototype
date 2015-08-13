@@ -124,10 +124,7 @@
 		}
 
 	}
-
-
-}
-@media (max-width: $screen-xs-max) {
+	@media (max-width: $screen-xs-max) {
 		.schedule-body {
 			display: block;
 			height: auto;
@@ -153,3 +150,6 @@
 			font-size: 34px;
 		}		
 	}
+
+
+}
