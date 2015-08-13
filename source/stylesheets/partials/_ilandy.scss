@@ -84,29 +84,7 @@
 		float: left;
 
 	}
-	@media (max-width: $screen-xs-max) {
-		.schedule-body {
-			display: block;
-			height: auto;
-			border: none;
-			overflow: hidden;
-		}
-		.schedule-img {
-			float: none;
-			width: 100%;
-			height: auto;
-			border: 1px solid #ccc;
-		}
-		.schedule-content {
-			@include flex(initial);
-			float: none;
-			width: 100%;
-			border: 1px solid #ccc;
-		}
-		.schedule-footer {
-			padding-top: 30px;
-		}		
-	}
+	
 	.schedule-content {
 		@include flex(1);
 		background-color: #EFEFEF;
@@ -149,3 +127,29 @@
 
 
 }
+@media (max-width: $screen-xs-max) {
+		.schedule-body {
+			display: block;
+			height: auto;
+			border: none;
+			overflow: hidden;
+		}
+		.schedule-img {
+			float: none;
+			width: 100%;
+			height: auto;
+			border: 1px solid #ccc;
+		}
+		.schedule-content {
+			@include flex(initial);
+			float: none;
+			width: 100%;
+			border: 1px solid #ccc;
+		}
+		.schedule-footer {
+			padding-top: 30px;
+		}
+		.fz-xs-h1{
+			font-size: 34px;
+		}		
+	}
