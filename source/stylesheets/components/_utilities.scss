@@ -100,6 +100,9 @@
 .mt0 {
   margin-top: 0 !important
 }
+.p0 {
+  padding: 0;
+}
 .mts {
   margin-top: $gap-small; 
 }
@@ -129,12 +132,20 @@
 .bg-light-gray {
   background-color: #FAFAFA;
 }
+.bg-green {
+  background-color: #007084;
+}
+.bg-light-green {
+  background-color: #B5D361;
+}
 .bg-deep-blue {
   background-color: #056C6E;
 }
 .bg-transparent-black {
   background-color: rgba(black, .75);
 }
+.bg-pink{ background-color: #F8A48A;}
+.bg-gray{ background-color: #aaa;}
 .bg-dot {
   &:after {
     content: "";
@@ -160,6 +171,9 @@
   &:after {
     opacity: 0;
   }
+}
+.ovh{
+  overflow: hidden;
 }
 @media (max-width: $screen-sm-max) {
   .bg-gray {
