@@ -436,22 +436,22 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #FAFAFA !default; //#fff !default;
+$navbar-default-color:             white; //#777 !default;
+$navbar-default-bg:                $brand-primary; //#FAFAFA !default; //#fff !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #056C6E !default; // #333 !default
-$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-color:                white !default;
+$navbar-default-link-hover-color:          white !default; // #333 !default
+$navbar-default-link-hover-bg:             darken($navbar-default-bg, 15%) !default;
 $navbar-default-link-active-color:         #FFF !default; // #555 !default
-$navbar-default-link-active-bg:            #8DCFC8 ; //darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-bg:            lighten($navbar-default-bg, 15%) ; //darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         #056C6E !default; //darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-color:         lighten($navbar-default-bg, 25%) !default; //darken($navbar-default-brand-color, 10%) !default;
 $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
