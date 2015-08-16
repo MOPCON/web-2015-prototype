@@ -181,6 +181,7 @@
     @include filter(grayscale(0));
   }
 }
+.common-idx { position: relative; z-index: $zindex-common; }
 .super-idx { position: relative; z-index: 9999; }
 
 .fc-primary{ color: $brand-primary; }
