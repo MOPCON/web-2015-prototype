@@ -91,16 +91,22 @@
 		border-left: 1px solid #ccc;
 		color: #00565E;
 		float: left;
+		position: relative;
 		
 	}
 	.schedule-content-header {
 		padding: 0 20px;
-		height: 148px;
+		height: 10em;
 		& > p {
-			height: 59px;
+			height: 3em;
+			overflow: hidden;
+			line-height: 1.5em;
 		}
 	}
 	.schedule-content-footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
 		
 		& > div {
 			height: 30px;
@@ -142,6 +148,10 @@
 			float: none;
 			width: 100%;
 			border: 1px solid #ccc;
+		}
+		.schedule-content-header {
+			height: auto !important;
+		    padding-bottom: 40px;
 		}
 		.schedule-footer {
 			padding-top: 30px;
