@@ -184,7 +184,7 @@
             <div class="schedule-img"><img src="<%= f.pic %>" width="100%" alt=""></div>
             <div class="schedule-content">
               <div class="schedule-content-header">
-                <h2><%= f.title %></h2>
+                <h3><%= f.title %></h3>
                 <p><%= f.summary %></p>
 
                 <% if f.issue != "" || f.speaker !="" %>
@@ -223,15 +223,15 @@
     <% current_page.data.day1_schedule.select{ |day1_schedule| day1_schedule.date == '2015/11/01'}.each do |f| %>
       <div class="col-xs-12 schedule">
 
-          <% if f.time != @prvTime; @prvTime = f.time %>
-          <div class="schedule-header"><span><%= f.time %></span></div>
+          <% if f.timeStart != @prvTime; @prvTime = f.timeStart %>
+          <div class="schedule-header"><span><%= f.timeStart %></span><span> ～ </span><span><%= f.timeEnd %></span></div>
           <% end %>
 
           <div class="schedule-body">
             <div class="schedule-img"><img src="<%= f.pic %>" width="100%" alt=""></div>
             <div class="schedule-content">
               <div class="schedule-content-header">
-                <h2><%= f.title %></h2>
+                <h3><%= f.title %></h3>
                 <p><%= f.summary %></p>
 
                 <% if f.issue != "" || f.speaker !="" %>
