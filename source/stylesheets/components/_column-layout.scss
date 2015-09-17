@@ -3,11 +3,31 @@
 	// @include column-gap($gutter*2);
 	// @include column-fill(balance);
 	// padding-bottom: 0; 
+	&.column-1 .column{
+		// @include column-count(3);
+		width: (100% / 1);
+		@media (max-width: $screen-md-min) {
+			width: (100% / 1);
+		}
+		@media (max-width: $screen-sm-min) {
+			width: (100% / 1);
+		}
+	}
+	&.column-2 .column{
+		// @include column-count(3);
+		width: (100% / 2);
+		@media (max-width: $screen-md-min) {
+			width: (100% / 2);
+		}
+		@media (max-width: $screen-sm-min) {
+			width: (100% / 2);
+		}
+	}
 	&.column-3 .column{
 		// @include column-count(3);
 		width: (100% / 3);
 		@media (max-width: $screen-md-min) {
-			width: (100% / 2);
+			width: (100% / 3);
 		}
 		@media (max-width: $screen-sm-min) {
 			width: (100% / 1);
