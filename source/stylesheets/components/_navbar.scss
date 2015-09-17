@@ -48,7 +48,7 @@
 // content for the user's viewport.
 
 .navbar-collapse {
-  overflow-x: visible;
+  overflow-x: hidden;
   padding-right: $navbar-padding-horizontal;
   padding-left:  $navbar-padding-horizontal;
   border-top: 1px solid transparent;
