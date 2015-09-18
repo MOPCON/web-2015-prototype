@@ -35,6 +35,24 @@
  ** schedule style **
 
 /---------------------*/
+.mbl-dates {
+	display: -webkit-flex;
+    display: flex;
+    z-index: 2;
+}
+.mbl-date {
+	-webkit-flex: 1;
+            flex: 1;
+    padding: 20px 0;
+    width: 0%;
+    &.active{
+    	width: 80%;
+    	-webkit-flex: initial;
+          		flex: initial;
+         @include transition(.2s);
+    }
+
+}
 .schedule {
 	font-family: "Helvetica Neue", Arial, "Microsoft JhengHei","微軟正黑體";
 	font-weight: 300;

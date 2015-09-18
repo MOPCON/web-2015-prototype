@@ -9,8 +9,11 @@ $(document).ready(function(){
 	$('.slideDown').on('click',function(){
 		$(this).toggleClass('active').parents('.schedule-body').next('.schedule-footer').toggleClass('active');
 	});
-	$('.slash').on('click',function(){
+	$('.mbl-date').on('click',function(){
 		$('[data-schedule]').addClass('hidden-xs').eq($(this).index()).toggleClass('hidden-xs');
+	});
+	$('.mbl-date').on('click',function(){
+		$('.mbl-date').toggleClass('active');
 	});
 		
 });
