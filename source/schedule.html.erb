@@ -175,7 +175,11 @@
   <div class="mbl-date bg-green active">10 / 30</div>
   <div class="mbl-date bg-deep-blue">11 / 01</div>
 </div>
-<div class="row mtm pdreset">
+<div class="text-white text-center hidden-sm hidden-md hidden-lg getSchdule">
+  <div class="getSchdule-day1 bg-green active"><i class="bucket-icon ton-li-people-5"></i>&nbsp;&nbsp;2015 / 10 / 30</div>
+  <div class="getSchdule-day2 bg-deep-blue"><i class="bucket-icon ton-li-people-5"></i>&nbsp;&nbsp;2015 / 11 / 01</div>
+</div>
+<div class="mtm pdreset">
   <div class="col-sm-6 col-xs-12" data-schedule>
     <% current_page.data.day1_schedule.select{ |day1_schedule| day1_schedule.date == '2015/10/31'}.each do |f| %>
       <div class="col-xs-12 schedule">
@@ -192,7 +196,7 @@
                 <p><%= f.summary %></p>
 
                 <% if f.issue != "" || f.speaker !="" %>
-                <div class="slideDown"></div>
+                <div class="i-slideDown"></div>
                 <% end %>
 
               </div>
@@ -271,6 +275,7 @@
     <% end %>
   </div>
 </div>
+
 
 
 

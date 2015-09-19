@@ -57,6 +57,24 @@
     }
 
 }
+.getSchdule {
+	display: none;
+	width: 100vw;
+	& > div {
+		padding: 20px 0;
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+	&.active{
+		display: block;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	z-index: $zindex-common;
+    }
+}
 .schedule {
 	font-family: "Helvetica Neue", Arial, "Microsoft JhengHei","微軟正黑體";
 	font-weight: 300;
@@ -135,7 +153,7 @@
 			line-height: 30px;
 		}
 	}
-	.slideDown {
+	.i-slideDown {
 		width: 30px;
 		height: 30px;
 		border: 2px solid #00565E;
@@ -186,7 +204,8 @@
 
 }
 .pdreset{
-	padding: 15px 0px 15px 15px;
 	box-sizing: border-box;
-	width: 100vw;
+	width: 100%;
+	margin-top: 15px;
+	overflow: hidden;
 }
