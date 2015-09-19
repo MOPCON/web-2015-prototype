@@ -39,6 +39,10 @@
 	display: -webkit-flex;
     display: flex;
     z-index: 2;
+    overflow: hidden;
+    height: 59px;
+    width: 100%;
+    margin: 0;
 }
 .mbl-date {
 	-webkit-flex: 1;
