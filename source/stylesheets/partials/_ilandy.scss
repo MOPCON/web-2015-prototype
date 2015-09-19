@@ -57,6 +57,13 @@
     }
 
 }
+%date-active {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $zindex-common;
+}
 .getSchdule {
 	display: none;
 	width: 100vw;
@@ -68,11 +75,12 @@
 		}
 	}
 	&.active{
-		display: block;
-    	position: fixed;
-    	top: 0;
-    	left: 0;
-    	z-index: $zindex-common;
+		@extend %date-active;
+    }
+}
+.dkt-dates {
+	&.active{
+		@extend %date-active;
     }
 }
 .schedule {

@@ -18,9 +18,9 @@ $(document).ready(function(){
 	});
 	$(document).scroll(function (event) {
         if ($(document).scrollTop() > 350) {
-            $(".getSchdule").addClass('active');
+            $(".getSchdule,.dkt-dates").addClass('active');
         } else {
-            $(".getSchdule").removeClass('active');
+            $(".getSchdule,.dkt-dates").removeClass('active');
         }
     });
 		
