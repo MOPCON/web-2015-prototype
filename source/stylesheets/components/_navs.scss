@@ -23,7 +23,21 @@
       &:hover,
       &:focus {
         text-decoration: none;
-        background-color: $nav-link-hover-bg;
+        background-color: rgba(0,0,0,0); //$nav-link-hover-bg;
+        color: white;
+        position: relative;
+        &:after{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          @media (max-width: $screen-sm-min) {
+            height: 0;
+          }
+        }
       }
     }
 
@@ -46,9 +60,13 @@
     &,
     &:hover,
     &:focus {
-      background-color: $nav-link-hover-bg;
+      background-color: rgba(255,255,255,.3);//$nav-link-hover-bg;
       border-color: $link-color;
+      @media (min-width: $screen-sm-min) {
+          background-color: #c3e6e2;//$nav-link-hover-bg;
+      }
     }
+   
   }
 
   // Nav dividers (deprecated with v3.0.1)

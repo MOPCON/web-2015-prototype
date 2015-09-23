@@ -411,9 +411,18 @@ body.has-navbar-fixed {
 
 // Default navbar
 .navbar-default {
-  background-color: $navbar-default-bg;
+  background-color: rgba(255,255,255,0);//$navbar-default-bg;
   border-color: $navbar-default-border;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex-navbar;
+  width: 100%;
+  @media (max-width: $screen-sm-min) {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
   .navbar-brand {
     color: $navbar-default-brand-color;
     &:hover,
@@ -421,8 +430,8 @@ body.has-navbar-fixed {
       color: $navbar-default-brand-hover-color;
       background-color: $navbar-default-brand-hover-bg;
     }
-  }
 
+  }
   .navbar-text {
     color: $navbar-default-color;
   }
@@ -434,7 +443,7 @@ body.has-navbar-fixed {
       &:hover,
       &:focus {
         color: $navbar-default-link-hover-color;
-        background-color: $navbar-default-link-hover-bg;
+        background-color: rgba(255,255,255,0);//$navbar-default-link-hover-bg;
       }
     }
     > .active > a {
@@ -454,7 +463,7 @@ body.has-navbar-fixed {
       }
     }
   }
-
+  
   .navbar-toggle {
     border-color: $navbar-default-toggle-border-color;
     &:hover,
@@ -541,7 +550,12 @@ body.has-navbar-fixed {
     }
   }
 }
-
+//ilandy
+@media (max-width: $screen-sm-min) {
+  .navbar-default {
+    background-color: #76c5bd;
+  }
+}
 // Inverse navbar
 
 .navbar-inverse {
