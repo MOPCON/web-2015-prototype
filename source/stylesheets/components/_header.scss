@@ -9,7 +9,7 @@
 		display: inline-block;
 		padding: 20px;
 		//margin-top: -$header-vertical-padding;
-		margin-bottom: $header-vertical-padding;
+		//margin-bottom: $header-vertical-padding;
 		margin-left: auto;
 		margin-right: auto;
 		z-index: $zindex-common;
@@ -38,7 +38,14 @@
 			font-weight: 300;
 			letter-spacing: 2px;
 		}
+
 	}
+	&>img{
+			padding-top: $header-vertical-padding;
+			@media (max-width: $screen-sm-min) {
+				padding-top: $header-vertical-padding/2;
+			}
+		}
 
 	.circle-logo {
 		background-image: image-url("large-logo.png");
@@ -50,6 +57,7 @@
 		left: -(image-width("large-logo.png") / 2);
 		top: -(image-height("large-logo.png") / 2);
 		@include animation(infinite-rotate 360s infinite linear);
+
 	}
 }
 
