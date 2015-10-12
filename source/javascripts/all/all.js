@@ -16,8 +16,9 @@ $(document).ready(function(){
 	$('.mbl-date').on('click',function(){
 		$('.mbl-date').toggleClass('active');
 	});
-	$(document).scroll(function (event) {
-        if ($(document).scrollTop() > 350) {
+	$(document).scroll(function (fixT) {
+
+        if ($(document).scrollTop() > 350 ) {
             $(".getSchdule,.dkt-dates").addClass('active');
         } else {
             $(".getSchdule,.dkt-dates").removeClass('active');
