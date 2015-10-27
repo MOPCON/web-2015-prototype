@@ -30,11 +30,26 @@
 .filter-img {
 	@include filter(grayscale(0.4));
 }
+
 /*---------------------/
 
  ** schedule style **
 
 /---------------------*/
+.i-allhackpad{
+	border: 1px solid #fff;
+	margin-top: 15px;
+	@include border-radius(3px);
+	display: inline-block;
+	padding: 10px 20px;
+	a {
+		color: #fff;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+}
 .mbl-dates {
 	display: -webkit-flex;
     display: flex;
@@ -43,6 +58,17 @@
     height: 59px;
     width: 100%;
     margin: 0;
+    &.fixTop{
+    	@extend %date-active;
+    }
+
+}
+%date-active {
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $zindex-common;
 }
 .mbl-date {
 	-webkit-flex: 1;
@@ -55,31 +81,12 @@
           		flex: initial;
          @include transition(.2s);
     }
+    
+}
 
-}
-%date-active {
-	display: block;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: $zindex-common;
-}
-.getSchdule {
-	display: none;
-	width: 100vw;
-	& > div {
-		padding: 20px 0;
-		display: none;
-		&.active {
-			display: block;
-		}
-	}
-	&.active{
-		@extend %date-active;
-    }
-}
 .dkt-dates {
-	&.active{
+	width: 105vw;
+	&.fixTop{
 		@extend %date-active;
     }
 }
@@ -92,6 +99,7 @@
 		font-size: 1.5em;
 		text-align: center;
 		margin-bottom: $gutter*2;
+
 		& > span {
 			display: inline-block;
 			position: relative;
@@ -150,6 +158,14 @@
 			overflow: hidden;
 			line-height: 1.5em;
 		}
+		
+		a {
+			text-decoration: none;
+			color: #00565E;
+			&:hover{
+				color: #00565E;
+			}
+		}
 	}
 	.schedule-content-footer {
 		position: absolute;
@@ -170,6 +186,7 @@
 		text-align: center;
 		@include border-radius(15px);
 		cursor: pointer;
+		display: inline-block;
 		&:after{
 			content:"＋";
 		}
@@ -178,6 +195,20 @@
 		}
 
 	}
+	.i-hackpad {
+		font-size: 1.7rem;
+		font-weight: 900;
+		@include border-radius(15px);
+		cursor: pointer;
+		display: inline-block;
+		border: 2px solid #00565E;
+		padding: 1px 10px;
+		margin-right: 5px;
+	}
+	.i-dont {
+		display: inline-block;
+	}
+	
 	@media (max-width: $screen-md-max) {
 		.schedule-body {
 			display: block;

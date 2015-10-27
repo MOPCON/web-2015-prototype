@@ -164,7 +164,8 @@
 <header class="header text-white text-center">
 	<!-- <img src="images/logo_header@2x.png" height="" width="500" alt="" class="img-responsive"> -->
 	<div class="circle-logo"></div>
-  <img src="images/logo_header@2x.png" height="" width="500" alt="" class="img-responsive center-block common-idx">
+  <h2 class="text-center common-idx">Schedule<br>of 2015</h2>
+  <h1 class="common-idx i-allhackpad"><a href="https://mopcon.hackpad.com/ep/group/EoDGLmpeTvK">All Hackpads</a></h1>
 </header>
 
 <div class="row text-white text-center ovh hidden-xs dkt-dates">
@@ -174,10 +175,6 @@
 <div class="row text-white text-center hidden-sm hidden-md hidden-lg mbl-dates">
   <div class="mbl-date bg-green active">10 / 30</div>
   <div class="mbl-date bg-deep-blue">11 / 01</div>
-</div>
-<div class="text-white text-center hidden-sm hidden-md hidden-lg getSchdule">
-  <div class="getSchdule-day1 bg-green active"><i class="bucket-icon ton-li-people-5"></i>&nbsp;&nbsp;2015 / 10 / 30</div>
-  <div class="getSchdule-day2 bg-deep-blue"><i class="bucket-icon ton-li-people-5"></i>&nbsp;&nbsp;2015 / 11 / 01</div>
 </div>
 <div class="mtm pdreset">
   <div class="col-sm-6 col-xs-12" data-schedule>
@@ -192,11 +189,14 @@
             <div class="schedule-img"><img src="<%= f.pic %>" width="100%" alt=""></div>
             <div class="schedule-content">
               <div class="schedule-content-header">
-                <h3><%= f.title %></h3>
+                <h3><a href=""><%= f.title %> <img src="images/schedule/arrow-02.png" height="25" width="26" /></a></h3>
                 <p><%= f.summary %></p>
 
                 <% if f.issue != "" || f.speaker !="" %>
                 <div class="i-slideDown"></div>
+                <div class="i-dont pull-right"><img src="images/schedule/idont-03.png" height="31" width="30"></div>
+                <div class="i-hackpad pull-right"><a href="">hackpad</a></div>
+                
                 <% end %>
 
               </div>
@@ -239,11 +239,13 @@
             <div class="schedule-img"><img src="<%= f.pic %>" width="100%" alt=""></div>
             <div class="schedule-content">
               <div class="schedule-content-header">
-                <h3><%= f.title %></h3>
+                <h3><a><%= f.title %> <img src="images/schedule/arrow-02.png" height="25" width="26" /></a></h3>
                 <p><%= f.summary %></p>
 
                 <% if f.issue != "" || f.speaker !="" %>
-                <div class="slideDown"></div>
+                <div class="i-slideDown"></div>
+                <div class="i-dont pull-right"><img src="images/schedule/idont-03.png" height="31" width="30"></div>
+                <div class="i-hackpad pull-right"><a href="">hackpad</a></div>
                 <% end %>
 
               </div>
