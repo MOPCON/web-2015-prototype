@@ -31,6 +31,7 @@
 	@include filter(grayscale(0.4));
 }
 
+
 /*---------------------/
 
  ** schedule style **
@@ -153,6 +154,7 @@
 	.schedule-content-header {
 		padding: 0 20px;
 		height: 10em;
+
 		& > p {
 			height: 3em;
 			overflow: hidden;
@@ -165,6 +167,14 @@
 			&:hover{
 				color: #00565E;
 			}
+		}
+		.ellipsis{
+			overflow:hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		    overflow: hidden;
+		    width: 90%;
+		    display: inline-block;
 		}
 	}
 	.schedule-content-footer {
