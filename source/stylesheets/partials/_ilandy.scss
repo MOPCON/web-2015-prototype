@@ -167,13 +167,18 @@
 			&:hover{
 				color: #00565E;
 			}
+			& + img {
+			display: inline-block;
+			margin-top: -10px;
+			}
 		}
+
 		.ellipsis{
 			overflow:hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
 		    overflow: hidden;
-		    width: 90%;
+		    max-width: 90%;
 		    display: inline-block;
 		}
 	}
